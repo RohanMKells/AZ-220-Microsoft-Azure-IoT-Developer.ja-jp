@@ -1,14 +1,9 @@
 ---
 lab:
-  title: ラボ 03:開発環境の設定
+  title: 'ラボ 03:開発環境の設定'
   module: 'Module 2: Devices and Device Communication'
-ms.openlocfilehash: ff8debfc695c847537f93449f9849775b2945b9c
-ms.sourcegitcommit: 7281efeb9cb5654361c2f1aa93aea724a3898966
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2022
-ms.locfileid: "145955880"
 ---
+
 # <a name="set-up-the-development-environment"></a>開発環境を設定する
 
 ## <a name="lab-scenario"></a>課題シナリオ
@@ -171,7 +166,7 @@ Visual Studio Code と Azure CLI ツール (仮想マシンに既にインスト
 
 ### <a name="exercise-2-install-developer-tools-and-products-on-the-local-pc"></a>演習 2:ローカル PC に開発者ツールと製品をインストールする
 
-> **重要**:演習 2 とこのラボの残りのすべての演習は、このコースのために作成された LOD 仮想マシンを使って **いない** 受講者を対象にしています。 ローカル PC を開発環境として構成する必要がある受講者は、演習 2 から 5 を使って、ローカル PC にツールをインストールし、開発環境を構成することができます。
+> **重要**:演習 2 とこのラボの残りのすべての演習は、このコースのために作成された LOD 仮想マシンを使って**いない**受講者を対象にしています。 ローカル PC を開発環境として構成する必要がある受講者は、演習 2 から 5 を使って、ローカル PC にツールをインストールし、開発環境を構成することができます。
 
 #### <a name="task-1-install-net-core-on-your-local-pc"></a>タスク 1:ローカル PC に .NET Core をインストールする
 
@@ -323,7 +318,7 @@ IoT Edge と Docker をサポートするために Python 3.9 を使用します
 
     複数のパッケージがダウンロードされ、インストールされます。 これには少し時間がかかります。
 
-1. インストールが完了したら、**新しい** コマンド シェルを開き、次のコマンドを入力します。
+1. インストールが完了したら、**新しい**コマンド シェルを開き、次のコマンドを入力します。
 
     ```powershell
     node --version
@@ -463,7 +458,7 @@ Microsoft は、ラボ リソース ファイルへのアクセスを提供す�
 
 1. **[参照]** をクリックし、アクセスに便利なフォルダーの場所に移動します。
 
-    > **重要**: 既定では、Windows の [最大ファイル パス長は 260](https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#maximum-path-length-limitation) です。 ZIP 内のファイル パスはすでに長いため、大きなファイル パスを使用してネストされたフォルダー内のアーカイブを抽出することは避けてください。 たとえば、zip を抽出するように求められるデフォルトのパスは、**c:\users\\[username]\downloads\AZ-220-Microsoft-Azure-IoT-Developer-master** のようになります。これは、できるだけ短くすることお勧めします (**c:\az220** など)
+    > **重要**: 既定では、Windows の[最大ファイル パス長は 260](https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#maximum-path-length-limitation) です。 ZIP 内のファイル パスはすでに長いため、大きなファイル パスを使用してネストされたフォルダー内のアーカイブを抽出することは避けてください。 たとえば、zip を抽出するように求められるデフォルトのパスは、**c:\users\\[username]\downloads\AZ-220-Microsoft-Azure-IoT-Developer-master** のようになります。これは、できるだけ短くすることお勧めします (**c:\az220** など)
 
 1. ファイルを抽出するには、 **[抽出]** をクリックします。
 
@@ -531,7 +526,7 @@ Azure CLI には、リソース プロバイダーの管理に役立ついくつ
     az provider list -o table
     ```
 
-    これにより、次のようなリソースの *長い* リストが表示されます。
+    これにより、次のようなリソースの*長い*リストが表示されます。
 
     ```powershell
     Namespace                                RegistrationPolicy    RegistrationState
@@ -588,7 +583,7 @@ Azure CLI には、リソース プロバイダーの管理に役立ついくつ
     az provider list -o table --query "[?(contains(namespace, 'insight') || contains(namespace, 'Event') || contains(namespace, 'TimeSeriesInsights'))]"
     ```
 
-    > **注**:register/unregister コマンドは大文字と小文字を区別しませんが、クエリ言語は大文字と小文字を区別しないため、**インサイト** は小文字にする必要があります。
+    > **注**:register/unregister コマンドは大文字と小文字を区別しませんが、クエリ言語は大文字と小文字を区別しないため、**インサイト**は小文字にする必要があります。
 
     これで、リソースが登録されます。
 

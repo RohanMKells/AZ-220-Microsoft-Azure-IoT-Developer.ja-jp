@@ -1,14 +1,9 @@
 ---
 lab:
-  title: ラボ 11:Azure IoT Edge の概要
+  title: 'ラボ 11:Azure IoT Edge の概要'
   module: 'Module 6: Azure IoT Edge Deployment Process'
-ms.openlocfilehash: a223c0aa8abc8c5a16e81d343a0f94a6b9bbdf36
-ms.sourcegitcommit: 88ea18cdadb26810b563a54c06ce5e98344bcd92
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "141258553"
 ---
+
 # <a name="introduction-to-azure-iot-edge"></a>Azure IoT Edge の概要
 
 ## <a name="lab-scenario"></a>課題シナリオ
@@ -73,7 +68,7 @@ Azure IoT Edge ソリューションのプロトタイプ作成を任されま�
 
     > **注**:**rg-az220** グループが既に存在する場合、 **[リージョン]** フィールドは、リソース グループで使用されるリージョンに設定され、読み取り専用になります。
 
-1. **[Your ID]\(ユーザー ID\)** フィールドに、演習 1 で作成した一意の ID を入力します。
+1. **[Your ID](ユーザー ID)** フィールドに、演習 1 で作成した一意の ID を入力します。
 
 1. **[コース ID]** フィールドに、「**az220**」と入力します。
 
@@ -123,7 +118,7 @@ Azure IoT Edge ソリューションのプロトタイプ作成を任されま�
 
 1. コマンドで作成された出力をレビューします。
 
-    出力には、IoT Edge デバイス用に作成された **デバイス ID** に関する情報が含まれています。 たとえば、自動生成されたキーを使用した `symmetricKey` 認証が既定として設定されており、`iotEdge` 機能が、指定された `--edge-enabled` パラメーターで示されるとおり `true` に設定されてることを確認できます。
+    出力には、IoT Edge デバイス用に作成された**デバイス ID** に関する情報が含まれています。 たとえば、自動生成されたキーを使用した `symmetricKey` 認証が既定として設定されており、`iotEdge` 機能が、指定された `--edge-enabled` パラメーターで示されるとおり `true` に設定されてることを確認できます。
 
     ```json
     {
@@ -155,7 +150,7 @@ Azure IoT Edge ソリューションのプロトタイプ作成を任されま�
     }
     ```
 
-1. IoT Edge デバイスの **接続文字列** を表示するには、次のコマンドを入力します。
+1. IoT Edge デバイスの**接続文字列**を表示するには、次のコマンドを入力します。
 
     ```bash
     az iot hub device-identity connection-string show --device-id sensor-th-0067 --hub-name iot-az220-training-{your-id}
@@ -224,7 +219,7 @@ Azure IoT Edge ソリューションのプロトタイプ作成を任されま�
 
 1. まだ Cloud Shell が開いていない場合は、 **[Cloud Shell]** をクリックします。
 
-1. Cloud Shell コマンド プロンプトで、前にメモした **パブリック SSH** コマンドを貼り付け、**Enter** キーを押します。
+1. Cloud Shell コマンド プロンプトで、前にメモした**パブリック SSH** コマンドを貼り付け、**Enter** キーを押します。
 
     > **注**:コマンドは次のようになります。
 
@@ -272,7 +267,7 @@ Azure IoT Edge ソリューションのプロトタイプ作成を任されま�
     sudo iotedge check
     ```
 
-    これにより、いくつかのチェックが実行され、結果が表示されます。 このラボでは、**構成チェック** の警告/エラーを無視してください。 **接続チェック** は成功し、次のようになります。
+    これにより、いくつかのチェックが実行され、結果が表示されます。 このラボでは、**構成チェック**の警告/エラーを無視してください。 **接続チェック**は成功し、次のようになります。
 
     ```bash
     Connectivity checks
@@ -423,7 +418,7 @@ Azure IoT Edge ソリューションのプロトタイプ作成を任されま�
 
 1. ブレードの上部にある **[更新]** をクリックします。
 
-1. **tempsensor** モジュールの **ランタイムの状態** が **動作中** に設定されています。
+1. **tempsensor** モジュールの **ランタイムの状態**が**動作中**に設定されています。
 
     それでも値が報告されない場合は、しばらく待ってからブレードを再度更新します。
 
@@ -506,7 +501,7 @@ Azure IoT Edge ソリューションのプロトタイプ作成を任されま�
 
 1. **[パフォーマンス]** フィールドを **[Standard]** に設定します。
 
-1. **[冗長]** フィールド を **ローカル冗長ストレージ (LRS)** に設定します。
+1. **[冗長]** フィールド を**ローカル冗長ストレージ (LRS)** に設定します。
 
 1. 他のすべての設定をそのままにします。
 
@@ -645,9 +640,9 @@ IoT Edge デバイスにデプロイされるように Stream Analytics ジョ�
 
     デプロイには数分かかります。
 
-1. Edge パッケージが正常に公開されたら、新しい ASA モジュールが **IoT Edge モジュール** セクションの下に表示されていることを確認します。
+1. Edge パッケージが正常に公開されたら、新しい ASA モジュールが **IoT Edge モジュール**セクションの下に表示されていることを確認します。
 
-1. **IoT Edge モジュール** で、 **[asa-az220-training-{your-id}]** をクリックします。
+1. **IoT Edge モジュール**で、 **[asa-az220-training-{your-id}]** をクリックします。
 
     これは、Edge デバイスに追加された Steam Analytics モジュールです。
 
@@ -659,7 +654,7 @@ IoT Edge デバイスにデプロイされるように Stream Analytics ジョ�
 
     これは、IoT Edge デバイスに展開されるすべての ASA ジョブに使用されるイメージと同じです。
 
-    > **注**:構成された **イメージ URI** の最後にあるバージョン番号には、Stream Analytics モジュールを作成したときの最新バージョンが反映されます。 このユニットを書いている時点では、バージョンは `1.0.8` でした。
+    > **注**:構成された**イメージ URI** の最後にあるバージョン番号には、Stream Analytics モジュールを作成したときの最新バージョンが反映されます。 このユニットを書いている時点では、バージョンは `1.0.8` でした。
 
 1. すべての値を既定値のままにして、 **[IoT Edge カスタム モジュール]** ペインを閉じます。
 
@@ -684,7 +679,7 @@ IoT Edge デバイスにデプロイされるように Stream Analytics ジョ�
     定義されるルートは次のとおりです。
 
     * **telemetryToCloud** ルートは、`tempsensor` モジュール出力から Azure IoT Hub にすべてのメッセージを送信します。
-    * **alertsToReset** ルートは、Stream Analytics モジュール出力から **tempsensor** モジュールの入力に、すべての警告メッセージを送信します。
+    * **alertsToReset** ルートは、Stream Analytics モジュール出力から **tempsensor ** モジュールの入力に、すべての警告メッセージを送信します。
     * **telemetryToAsa** ルートは、`tempsensor` モジュール出力から Stream Analytics モジュール入力にすべてのメッセージを送信します。
 
 1. **[デバイスのモジュールを設定: sensor-th-0067**] ブレードの下部にある、 **[Review + create]** をクリックします。
@@ -728,7 +723,7 @@ IoT Edge デバイスにデプロイされるように Stream Analytics ジョ�
 
 #### <a name="task-6-view-data"></a>タスク 6:データの表示
 
-1. **SSH** 経由で **IoT Edge デバイス** に接続している **Cloud Shell** セッションに戻ります。
+1. **SSH** 経由で **IoT Edge デバイス**に接続している **Cloud Shell** セッションに戻ります。
 
     閉じているか、タイムアウトしている場合は、再接続します。 `SSH` コマンドを実行し、前と同じログインを行います。
 
@@ -759,7 +754,7 @@ IoT Edge デバイスにデプロイされるように Stream Analytics ジョ�
 
 1. 出力を確認するには、少し時間がかかります。
 
-    **tempsensor** によって送信される温度テレメトリを監視している間、`machine.temperature` の平均が `25` を超えると、Stream Analytics ジョブによって **リセット** コマンドが送信されることに注意してください。 これは、Stream Analytics ジョブ クエリで構成されたアクションです。
+    **tempsensor** によって送信される温度テレメトリを監視している間、`machine.temperature` の平均が `25` を超えると、Stream Analytics ジョブによって**リセット** コマンドが送信されることに注意してください。 これは、Stream Analytics ジョブ クエリで構成されたアクションです。
 
     このイベントの出力は、以下のようなものになります。
 

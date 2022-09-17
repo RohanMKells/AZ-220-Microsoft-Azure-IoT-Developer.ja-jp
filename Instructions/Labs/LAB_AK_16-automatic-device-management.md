@@ -1,14 +1,9 @@
 ---
 lab:
-  title: ラボ 16:Azure IoT Hub を使用した IoT デバイス管理の自動化
+  title: 'ラボ 16:Azure IoT Hub を使用した IoT デバイス管理の自動化'
   module: 'Module 8: Device Management'
-ms.openlocfilehash: 3b752cc477c664f1c44b754c49b2e20542de1f72
-ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "140872824"
 ---
+
 # <a name="automate-iot-device-management-with-azure-iot-hub"></a>Azure IoT Hub を使用した IoT デバイス管理の自動化
 
 IoT デバイスは、最適化されたオペレーティング システムを使用したり、シリコン上でコードを直接実行したりします (実際のオペレーティング システムは必要ありません)。 このようなデバイスで実行されているソフトウェアを更新するために最も一般的な方法は、OSだけでなく実行されているアプリ (ファームウェアと呼ばれる) を含み、ソフトウェア パッケージ全体の新しいバージョンをフラッシュすることです。
@@ -96,7 +91,7 @@ IT 部署は、オペレータ向けに開発したバックエンド ポータ�
 
     > **注**:**rg-az220** グループが既に存在する場合、 **[リージョン]** フィールドは、リソース グループで使用されるリージョンに設定され、読み取り専用になります。
 
-1. **[Your ID]\(ユーザー ID\)** フィールドに、演習 1 で作成した一意の ID を入力します。
+1. **[Your ID](ユーザー ID)** フィールドに、演習 1 で作成した一意の ID を入力します。
 
 1. **[コース ID]** フィールドに、「**az220**」と入力します。
 
@@ -159,7 +154,7 @@ Azure portal を使用して、デバイス　ツインのプロパティを使�
 
 このタスクでは、IoT Hub で生成された要求に応答して、デバイスのファームウェア更新プログラムをシミュレートするためのコードを確認します。
 
-1. **Program.cs** ファイルが Visual Studio Code で開かれていることを確認します。
+1. **Program.cs **ファイルが Visual Studio Code で開かれていることを確認します。
 
 1. `Global Variables` というコメントを探します。
 

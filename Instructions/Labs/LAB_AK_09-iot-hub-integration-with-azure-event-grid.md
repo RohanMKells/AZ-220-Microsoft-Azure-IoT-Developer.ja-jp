@@ -1,14 +1,9 @@
 ---
 lab:
-  title: ラボ 09:IoT Hub と Event Grid を統合する
+  title: 'ラボ 09:IoT Hub と Event Grid を統合する'
   module: 'Module 5: Insights and Business Integration'
-ms.openlocfilehash: 85c57fcbf64a6b20636b0ef289d634ef09e9c292
-ms.sourcegitcommit: eec2943250f1cd1ad2c5202ecbb9c37af71e8961
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "140872836"
 ---
+
 # <a name="integrate-iot-hub-with-event-grid"></a>IoT Hub と Event Grid を統合する
 
 ## <a name="lab-scenario"></a>課題シナリオ
@@ -69,7 +64,7 @@ Contoso 社の経営陣は、Azure IoT サービスを使用して作成した�
 
     > **注**:**rg-az220** グループが既に存在する場合、 **[リージョン]** フィールドは、リソース グループで使用されるリージョンに設定され、読み取り専用になります。
 
-1. **[Your ID]\(ユーザー ID\)** フィールドに、演習 1 で作成した一意の ID を入力します。
+1. **[Your ID](ユーザー ID)** フィールドに、演習 1 で作成した一意の ID を入力します。
 
 1. **[コース ID]** フィールドに、「**az220**」と入力します。
 
@@ -153,7 +148,7 @@ Azure Logic Apps は、企業全体または組織全体でアプリ、データ
 
     **logic-az220-training-{your-id}** ロジック アプリが表示されない場合は、リソース グループ タイルを更新します。
 
-    > **注**:その **ロジック アプリ** に初めて移動すると、 **[Logic Apps デザイナー]** ペインが表示されます。 このページが自動的に表示されない場合は、 **[ロジック アプリ]** ブレードの **[開発ツール]** セクションの **[ロジック アプリ デザイナー]** をクリックします。
+    > **注**:その**ロジック アプリ**に初めて移動すると、 **[Logic Apps デザイナー]** ペインが表示されます。 このページが自動的に表示されない場合は、 **[ロジック アプリ]** ブレードの **[開発ツール]** セクションの **[ロジック アプリ デザイナー]** をクリックします。
 
 1. **[共通のトリガーで開始]** セクションの **[HTTP 要求を受信したとき]** をクリックします。
 
@@ -297,7 +292,7 @@ Azure Logic Apps は、企業全体または組織全体でアプリ、データ
 
 1. [イベント サブスクリプションの作成] ブレードの **[名前]** フィールドに、 **[MyDeviceCreateEvent]** と入力します。
 
-1. **EventSchema** フィールドが **Event Grid スキーマ** に設定されていることを確認します。
+1. **EventSchema** フィールドが **Event Grid スキーマ**に設定されていることを確認します。
 
 1. **[トピックの詳細]** で、「**mydevicetopic-{your-id}** 」と入力します
 
