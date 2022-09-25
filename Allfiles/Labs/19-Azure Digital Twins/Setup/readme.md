@@ -1,1 +1,1 @@
-# <a name="placeholder"></a>プレースホルダー
+# Placeholder
