@@ -1,10 +1,10 @@
 ---
 lab:
-  title: 'ラボ 18:Azure Defender for IoT で IoT デバイスが改ざんされているかどうかを検出する'
-  module: 'Module 10: Azure Defender and IoT Security'
+  title: 'ラボ 18: Microsoft Defender for IoT での作業を開始する'
+  module: 'Module 10: Microsoft Defender and IoT Security'
 ---
 
-# <a name="detect-device-tampering-with-azure-defender-for-iot"></a>Azure Defender for IoT でデバイス改ざんされているかどうかを検出する
+# <a name="detect-device-tampering-with-microsoft-defender-for-iot"></a>Microsoft Defender for IoT でデバイス改ざんされているかどうかを検出する
 
 ## <a name="lab-scenario"></a>課題シナリオ
 
@@ -18,21 +18,21 @@ Contoso は、新しい IoT デバイスを備えた新しいアセンブリ ラ
 
 ![ラボ 18 のアーキテクチャ](media/LAB_AK_18-architecture.png)
 
-> **助言**：**Azure Defender for IoT** は、以前は **Azure Security Center for IoT** と呼ばれていました。 名前の変更が段階的に展開されるため、オンライン ドキュメント、GitHub リソース、およびこのコンテンツにいくつかの矛盾が見つかる場合があります。
+> **ヒント**: **Microsoft Defender for IoT** は、以前は **Azure Defender for IoT** および **Azure Security Center for IoT** と呼ばれていました。 名前の変更が段階的に展開されるため、オンライン ドキュメント、GitHub リソース、およびこのコンテンツにいくつかの矛盾が見つかる場合があります。
 
 ## <a name="in-this-lab"></a>このラボでは
 
 このラボでは、次のタスクを正常に達成します。
 
 * ラボの前提条件を構成する (必要な Azure リソース)
-* Azure Defender for IoT を有効にする
+* Microsoft Defender for IoT を有効にする
 * 新しいデバイスを作成して登録する
 * セキュリティ モジュール ツインを作成する
 * Linux デバイスに C# ベースのセキュリティ エージェントをインストールする
 * 監視対象リソースを構成する
 * カスタム アラートの作成
 * 警告をトリガーするコンソール アプリを作成する
-* Azure Security Center でアラートを確認する
+* Microsoft Defender for IoT のアラートを確認する。
 
 ## <a name="lab-instructions"></a>ラボの手順
 
@@ -89,20 +89,20 @@ Contoso は、新しい IoT デバイスを備えた新しいアセンブリ ラ
 
 これで、リソースが作成されました。
 
-### <a name="exercise-2-enable-azure-defender-for-iot-hub"></a>演習 2:Azure Defender for IoT Hub を有効にする
+### <a name="exercise-2-enable-microsoft-defender-for-iot-hub"></a>演習 2: Microsoft Defender for IoT Hub を有効にする
 
-Azure Defender for IoT を使用すると、セキュリティ管理を統一したり、ハイブリッド クラウド ワークロードと Azure IoT ソリューション全体でエンド ツー エンドの脅威の検出および分析を行ったりできます。
+Microsoft Defender for IoT を使用すると、セキュリティ管理を統一したり、ハイブリッド クラウド ワークロードと Azure IoT ソリューション全体でエンド ツー エンドの脅威の検出と分析を行ったりできます。
 
-Azure Defender for IoT は、次のコンポーネントで構成されています。
+Microsoft Defender for IoT は、次のコンポーネントで構成されています。
 
 * IoT Hub 統合
 * デバイス エージェント (オプション)
 * セキュリティ メッセージの送信 SDK
 * 分析パイプライン
 
-#### <a name="task-1-enable-azure-defender-for-iot"></a>タスク 1:Azure Defender for IoT を有効にする
+#### <a name="task-1-enable-microsoft-defender-for-iot"></a>タスク 1: Microsoft Defender for IoT を有効にする
 
-このタスクでは、IoT Hub 用の **Azure Defender for IoT** を有効にします。
+このタスクでは、IoT Hub 用の **Microsoft Defender for IoT** を有効にします。
 
 1. 必要な場合は、お使いの Azure アカウントの資格情報を使用して Azure portal にログインします。
 
@@ -114,7 +114,7 @@ Azure Defender for IoT は、次のコンポーネントで構成されていま
 
 1. 左側のメニューの **[Defender for IoT]** の下にある **[概要]** をクリックします。
 
-    Azure Defender for IoT Hub は、セキュリティ ウィンドウが初めて開くとオンボードされます。
+    Microsoft Defender for IoT Hub は、セキュリティ ウィンドウが初めて開くとオンボードされます。
 
 1. **[IoT ソリューションを保護する]** ボタンが表示された場合は、 **[IoT ソリューションを保護する]** をクリックし、プロンプトが表示されたらブラウザー ウィンドウを更新します。
 
@@ -122,11 +122,11 @@ Azure Defender for IoT は、次のコンポーネントで構成されていま
 
 1. 時間をとって [セキュリティの概要] ウィンドウのコンテンツを確認します。
 
-    > **注**:Azure Defender for IoT をオンボードした最初の瞬間に脅威が即座に検出されるわけではありません。このラボが終了する前に、この [概要] ペインで脅威の検出が報告されるようになります。
+    > **注**: Microsoft Defender for IoT をオンボードするとすぐに脅威が検出されるわけではなく、このラボが終了する前に、この [概要] ペインで脅威の検出が報告されるようになります。
 
 #### <a name="task-2-log-analytics-creation"></a>タスク 2:Log Analytics の作成
 
-Azure Defender for IoT を有効にすると、IoT デバイス、IoT Edge、IoT Hub に関する生のセキュリティ イベント、アラート、レコメンデーションを格納するための Azure Log Analytics ワークスペースを作成する必要があります。
+Microsoft Defender for IoT を有効にするときは、IoT デバイス、IoT Edge、IoT Hub に関する生のセキュリティ イベント、アラート、推奨事項を格納するために Azure Log Analytics ワークスペースを作成する必要があります。
 
 このタスクでは、Log Analytics のワークスペース構成をさらっと確認します。
 
@@ -260,9 +260,9 @@ Azure Defender for IoT を有効にすると、IoT デバイス、IoT Edge、IoT
 
 ### <a name="exercise-4-create-a-security-module-twin"></a>演習 4:セキュリティ モジュール ツインを作成する
 
-Azure Defender for IoT は、既存の IoT デバイス管理プラットフォームと完全に統合されるため、デバイスのセキュリティ状態を管理したり、既存のデバイス制御機能を利用したりすることができます。
+Microsoft Defender for IoT は、既存の IoT デバイス管理プラットフォームと完全に統合されるため、デバイスのセキュリティ状態を管理したり、既存のデバイス制御機能を利用したりすることができます。
 
-Azure Defender for IoT では、モジュール ツイン メカニズムを利用して、各デバイス用の azureiotsecurity というセキュリティ モジュール ツインが管理されます。 セキュリティ モジュール ツインでは、各デバイスのデバイス セキュリティに関連するすべての情報が保持されます。 Azure Defender for IoT の機能を最大限に活用するには、新しい IoT Edge デバイスに対して、これらのセキュリティ モジュール ツインを作成、構成、および使用する必要があります。
+Microsoft Defender for IoT では、モジュール ツイン メカニズムを利用して、各デバイス用の azureiotsecurity というセキュリティ モジュール ツインが管理されます。 セキュリティ モジュール ツインでは、各デバイスのデバイス セキュリティに関連するすべての情報が保持されます。 Microsoft Defender for IoT の機能を最大限に活用するには、新しい IoT Edge デバイスに対して、これらのセキュリティ モジュール ツインを作成、構成、および使用する必要があります。
 
 セキュリティ モジュール ツイン (**azureiotsecurity**) は、次のいずれかの方法を使用して作成できます。
 
@@ -309,16 +309,16 @@ Azure Defender for IoT では、モジュール ツイン メカニズムを利�
 
     > **注**:IoT Hub のホスト名は次のようになります: iot-az220-training-cah102119.azure-devices.net
 
-### <a name="exercise-5-deploy-azure-defender-for-iot-c-security-agent"></a>エクササイズ 5:Azure Defender for IoT C# セキュリティ エージェントのデプロイ
+### <a name="exercise-5-deploy-microsoft-defender-for-iot-c-security-agent"></a>演習 5: Microsoft Defender for IoT の C# セキュリティ エージェントをデプロイする
 
-Azure Defender for IoT には、IoT Hub を介してセキュリティ データのログを収集、処理、集計、および送信する、セキュリティ エージェントの参照アーキテクチャがあります。 C および C# ベースのエージェントがあります。 C エージェントは、より制限されたまたは最小限のデバイス リソースを持つデバイスに推奨されます。
+Microsoft Defender for IoT には、IoT Hub を介してセキュリティ データのログを収集、処理、集計、および送信する、セキュリティ エージェントの参照アーキテクチャがあります。 C および C# ベースのエージェントがあります。 C エージェントは、より制限されたまたは最小限のデバイス リソースを持つデバイスに推奨されます。
 
 セキュリティ エージェントは、次の機能をサポートしています。
 
-* 基になるオペレーティング システム (Linux、Windows) から未処理のセキュリティ イベントを収集する。 使用可能なセキュリティ データ コレクターの詳細については、「Azure Defender for IoT エージェントの構成」を参照してください。
+* 基になるオペレーティング システム (Linux、Windows) から未処理のセキュリティ イベントを収集する。 使用できるセキュリティ データ コレクターについて詳しくは、Microsoft Defender for IoT エージェントの構成に関する記事をご覧ください。
 * 未加工のセキュリティ イベントを収集して、IoT Hub を介して送信されるメッセージにする。
 * 既存のデバイス ID、または専用のモジュール ID で認証する。 詳細については、「セキュリティ エージェントの認証方法」を参照してください。
-* **azureiotsecurity** モジュール ツインを使用してリモートで構成する。 詳細については、「Azure Defender for IoT エージェントの構成」をご覧ください。
+* **azureiotsecurity** モジュール ツインを使用してリモートで構成する。 詳しくは、Microsoft Defender for IoT エージェントの構成に関する記事をご覧ください。
 
 この演習では、シミュレーションされたデバイス (Linux VM) にデプロイする C# のセキュリティ エージェントを追加します。
 
@@ -459,9 +459,9 @@ Azure Defender for IoT には、IoT Hub を介してセキュリティ データ
 
 1. Cloud Shell コマンド プロンプトで、仮想マシンに再接続するには、以前使用した SSH コマンドを入力します。
 
-    Azure Defender for IoT エージェントがアクティブになり実行されます。
+    Microsoft Defender for IoT エージェントがアクティブになり実行されます。
 
-1. Cloud Shell コマンド プロンプトで、Azure Defender for IoT エージェントのデプロイ状態を確認するには、次のコマンドを入力します。
+1. Cloud Shell コマンド プロンプトで、Microsoft Defender for IoT エージェントのデプロイ状態を確認するには、次のコマンドを入力します。
 
     ```cmd/sh
     systemctl status ASCIoTAgent.service
@@ -481,7 +481,7 @@ Azure Defender for IoT には、IoT Hub を介してセキュリティ データ
 
     具体的には、サービスが **読み込み済み: 読み込み済み**で、**アクティブ: アクティブ (実行中)** であることを確認する必要があります。
 
-    > **注**: Azure Defender for IoT エージェントが実行されていないか、アクティブではない場合、「[Linux 用の Defender for IoT の C# ベースのセキュリティ エージェントをデプロイする](https://docs.microsoft.com/en-us/azure/defender-for-iot/device-builders/how-to-deploy-linux-cs)」を確認してください。 サービスを**アクティブ: アクティブ化中**のままにすることがある一般的な問題は、正しくないキー値であるか、完全な IoT Hub ホスト名を指定していないことです。
+    > **注**: Microsoft Defender for IoT エージェントが実行されていないか、アクティブではない場合は、「[Linux 用の Defender for IoT の C# ベースのセキュリティ エージェントをデプロイする](https://docs.microsoft.com/en-us/azure/defender-for-iot/device-builders/how-to-deploy-linux-cs)」を確認してください。 サービスを**アクティブ: アクティブ化中**のままにすることがある一般的な問題は、正しくないキー値であるか、完全な IoT Hub ホスト名を指定していないことです。
 
 1. Azure portal で、IoT Hub のブレードに戻り、 **[vm-az220-training-edge0002-{your-id}]** デバイス ブレードを開きます。
 
@@ -491,15 +491,15 @@ Azure Defender for IoT には、IoT Hub を介してセキュリティ データ
 
     ![接続済みの Azure IoT セキュリティ モジュールのスクリーンショット](media/LAB_AK_18-device-connected-agent.png)
 
-これで、Azure Defender for IoT デバイス エージェントがデバイスにインストールされ、エージェントはデバイスから生のセキュリティ イベントを収集、集計、分析できるようになりました。
+これで、Microsoft Defender for IoT デバイス エージェントがデバイスにインストールされ、エージェントはデバイスから生のセキュリティ イベントを収集、集計、分析できるようになりました。
 
 ### <a name="exercise-6-configure-solution-management"></a>演習 6:ソリューション管理の構成
 
-Azure Defender for IoT は、Azure ベースの IoT ソリューションに対してエンド ツー エンドのセキュリティを提供します。
+Microsoft Defender for IoT は、Azure ベースの IoT ソリューションに対してエンド ツー エンドのセキュリティを提供します。
 
-Azure Defender for IoT を使用すると、1 つのダッシュボードで IoT ソリューション全体を監視し、Azure 内のすべての IoT デバイス、IoT プラットフォーム、およびバックエンド リソースを明確に把握することができます。
+Microsoft Defender for IoT を使用すると、1 つのダッシュボードで IoT ソリューション全体を監視し、Azure 内のすべての IoT デバイス、IoT プラットフォーム、バックエンド リソースを明確に把握できます。
 
-Azure Defender for IoT をお使いの IoT Hub で有効にすると、その IoT Hub に接続されていてお使いの IoT ソリューションに関連している他の Azure サービスが自動的に識別されます。
+Microsoft Defender for IoT を IoT Hub で有効にすると、その IoT Hub に接続されて IoT ソリューションに関連付けられている他の Azure サービスも自動的に識別されます。
 
 自動でリレーションシップを検出できるだけでなく、他のどの Azure リソース グループを IoT ソリューションの一部としてタグ付けするかを選択することもできます。 選択に応じて、サブスクリプション全体、リソース グループ、または単一のリソースを追加できます。
 
@@ -518,7 +518,7 @@ Azure Defender for IoT をお使いの IoT Hub で有効にすると、その Io
 
 1. リソースのリストを表示するには、 **[監視対象リソース]** をクリックします。
 
-    リソースの一覧には、IoT Hub、Azure Defender for IoT のアクティブ化が以前に行われたときに作成されたワークスペース、および現在のサブスクリプションが既に含まれていることに注意してください。
+    リソースの一覧には、IoT Hub、Microsoft Defender for IoT のアクティブ化が以前に行われたときに作成されたワークスペース、および現在のサブスクリプションが既に含まれていることに注意してください。
 
 1. ウィンドウの上部にある **[編集]** をクリックします。
 
@@ -538,11 +538,11 @@ Azure Defender for IoT をお使いの IoT Hub で有効にすると、その Io
 
 1. **[ソリューション管理]** ウィンドウを閉じます。
 
-すべてのリソースのリレーションシップを定義すると、Azure Defender for IoT によって、これらのリソースに対するセキュリティのレコメンデーションとアラートが Azure Defender を通じて提供されるようになります。
+すべてのリソースの関係を定義すると、Microsoft Defender for IoT によって、これらのリソースに対するセキュリティの推奨事項とアラートが Azure Defender を通じて提供されるようになります。
 
-#### <a name="task-2-view-azure-defender-for-iot-in-action"></a>タスク 2:Azure Defender for IoT のアクションを表示する
+#### <a name="task-2-view-microsoft-defender-for-iot-in-action"></a>タスク 2: 動作している Microsoft Defender for IoT を表示する
 
-これで、デバイスにセキュリティ エージェントがインストールされ、ソリューションが構成されました。 Azure Defender for IoT のさまざまなビューを確認することをお勧めします。
+これで、デバイスにセキュリティ エージェントがインストールされ、ソリューションが構成されました。 Microsoft Defender for IoT のさまざまなビューを確認することをお勧めします。
 
 1. 左側のメニューの **[Defender for IoT]** の下にある **[概要]** をクリックします。
 
@@ -568,7 +568,7 @@ Azure Defender for IoT をお使いの IoT Hub で有効にすると、その Io
 
 ご存知のとおり、IoT デバイスは、すぐに使用できるアルゴリズムよりも優れています。
 
-期待されるデバイスの動作を十分に理解しているお客様は、Azure Defender for IoT を使用して、この理解をデバイス動作ポリシーに変換し、想定される通常の動作からの偏差に対してアラートを作成することができます。
+期待されるデバイスの動作を十分に理解しているお客様は、Microsoft Defender for IoT を使用して、この理解をデバイス動作ポリシーに変換し、想定される通常の動作からの逸脱に対してアラートを生成できます。
 
 #### <a name="task-1---customize-an-alert"></a>タスク 1 - 警告をカスタマイズする
 
@@ -842,13 +842,13 @@ Azure Defender for IoT をお使いの IoT Hub で有効にすると、その Io
 
     このラボの残りの部分では、アプリを実行したままにして、複数のアラートを生成できます。
 
-### <a name="exercise-9-review-azure-defender-for-iot-alerts"></a>演習 9:Azure Defender for IoT のアラートを確認する
+### <a name="exercise-9-review-microsoft-defender-for-iot-alerts"></a>演習 9: Microsoft Defender for IoT でアラートを確認する
 
 この時点で、コンソール アプリは、以前に作成したカスタム警告をトリガーするのに十分なテレメトリを送信しています。
 
 > **ヒント**: この警告は、5 分以内にデバイスからクラウドに送信されたメッセージが 1 個未満または 6 個以上の場合にトリガーされるように設定されました。
 
-#### <a name="task-1-review-the-azure-defender-for-iot-dashboard"></a>タスク 1:Azure Defender for IoT のダッシュボードを確認する
+#### <a name="task-1-review-the-microsoft-defender-for-iot-dashboard"></a>タスク 1: Microsoft Defender for IoT のダッシュボードを確認する
 
 1. [Azure portal] メニューで、 **[ダッシュボード]** をクリックし、IoT Hub を開きます。
 

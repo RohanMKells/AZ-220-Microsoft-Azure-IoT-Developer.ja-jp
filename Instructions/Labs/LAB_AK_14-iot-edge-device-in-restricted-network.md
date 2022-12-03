@@ -47,7 +47,7 @@ Contoso がチーズ用パッケージングおよび出荷設備で導入した
 これらのリソースを確実に使用できるようにするには、次の手順に従います。
 
 1. 仮想マシン環境で Microsoft Edge ブラウザー ウィンドウを開き、次の Web アドレスに移動します。
- 
+
     +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab14.json+++
 
     > **注**:緑色の "T" 記号 (例: +++このテキストを入力+++) が表示されているときはいつでも、関連付けられているテキストをクリックすると、仮想マシン環境内の現在のフィールドに情報が入力されます。
@@ -80,7 +80,7 @@ Contoso がチーズ用パッケージングおよび出荷設備で導入した
 
 1. **[認証の種類]** フィールドで、 **[パスワード]** を選びます。
 
-1. **[Admin Password Or Key]\(管理者のパスワードまたはキー\)** フィールドに、管理者アカウントで使うパスワードを入力します。
+1. **[Admin Password Or Key](管理者のパスワードまたはキー)** フィールドに、管理者アカウントで使うパスワードを入力します。
 
 1. テンプレートを検証するには、 **[確認および作成]** をクリックします。
 
@@ -584,7 +584,7 @@ IoT Edge デバイスは、切断/オフライン状態の場合に自動的に�
 
 ローカル コンピューターで VM 名を適切な IP アドレスに解決できるようになります。
 
-#### <a name="task-1-configure-device-app"></a>タスク 1:デバイス アプリの構成
+#### <a name="task-2-configure-device-app"></a>タスク 2: デバイス アプリを構成する
 
 このタスクでは、対称キーを使用して IoT Hub に接続するようにダウンストリーム IoT デバイス (子デバイスまたはリーフ デバイス) を構成します。 デバイスは、(親 IoT Edge デバイスのゲートウェイ ホスト名に加えて) 対称キーを含む接続文字列を使用して IoT Hub と親 IoT Edge デバイスに接続するように構成されます。
 
@@ -672,7 +672,7 @@ IoT Edge デバイスは、切断/オフライン状態の場合に自動的に�
 
 1. 次の演習に進むときは、シミュレートされたデバイスを実行したままにします。
 
-#### <a name="task-2-test-device-connectivity-and-offline-support"></a>タスク 2:デバイス接続とオフライン サポートをテストする
+#### <a name="task-3-test-device-connectivity-and-offline-support"></a>タスク 3:デバイス接続とオフライン サポートをテストする
 
 このタスクでは、**vm-az220-training-gw0002-{your-id}** の IoT Edge の透過的なゲートウェイを介して Azure IoT Hub に送信されている **sensor-th-0084** からのイベントを監視します。 次に、**vm-az220-training-gw0002-{your-id}** と Azure IoT Hub の間の接続を中断し、テレメトリが子 IoT デバイスから IoT Edge ゲートウェイに今もなお送信されることを確認します。 この後、Azure IoT Hub との接続を再開し、IoT Edge ゲートウェイが Azure IoT Hub への製品利用統計情報の送信を再開することを監視します。
 
@@ -722,7 +722,7 @@ IoT Edge デバイスは、切断/オフライン状態の場合に自動的に�
 
     > **注**:次に、 **オフライン**機能をテストする必要があります。 これを行うには、**vm-az220-training-gw0002-{your-id}** デバイスをオフラインにする必要があります。 これは Azure で実行されている仮想マシンであるため、 VM の **ネットワーク セキュリティ グループ**に**アウトバウンド規則**を追加することで、シミュレートすることができます。
 
-#### <a name="task3-add-rule-to-block-traffic"></a>タスク 3:トラフィックをブロックするルールの追加
+#### <a name="task-4-add-rule-to-block-traffic"></a>タスク 4:トラフィックをブロックするルールを追加する
 
 1. **Azure portal** で、ダッシュボードに移動し **rg-az220vm** リソース グループ タイルを表示します。
 

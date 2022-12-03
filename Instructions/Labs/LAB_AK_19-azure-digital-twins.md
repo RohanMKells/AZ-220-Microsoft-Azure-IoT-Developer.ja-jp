@@ -89,7 +89,7 @@ ADT を最大限に活用する方法をよりよく理解するために、既�
 1. 現在のユーザー ID を確認するには、**Cloud Shell** を開き、次のコマンドを実行します。
 
     ```sh
-    az ad signed-in-user show --query Id -o tsv
+    az ad signed-in-user show --query id -o tsv
     ```
 
     表示されたオブジェクト ID をコピーします。
@@ -113,9 +113,9 @@ ADT を最大限に活用する方法をよりよく理解するために、既�
 
 これで、リソースが作成されました。
 
-#### <a name="task-2---verify-tools"></a>タスク2 - ツールを確認する
+#### <a name="task-2---verify-lab-tool-versions"></a>タスク 2 - ラボ ツールのバージョンを確認する
 
-1. お使いの仮想マシン環境で、Windows コマンド プロンプト ウィンドウを開きます。
+1. お使いのラボ環境で、Windows コマンド プロンプト ウィンドウを開きます。
 
 1. ローカル環境にインストールされている Azure CLI のバージョンを表示するには、次のコマンドを入力します。
 
