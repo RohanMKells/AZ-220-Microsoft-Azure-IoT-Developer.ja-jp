@@ -41,7 +41,7 @@ Contoso 社の経営陣は、Azure IoT サービスを使用して作成した�
 これらのリソースを確実に使用できるようにするには、次の手順に従います。
 
 1. 仮想マシン環境で Microsoft Edge ブラウザー ウィンドウを開き、次の Web アドレスに移動します。
- 
+
     +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fmaster%2FAllfiles%2FARM%2Flab09.json+++
 
     > **注**:緑色の "T" 記号 (例: +++このテキストを入力+++) が表示されているときはいつでも、関連付けられているテキストをクリックすると、仮想マシン環境内の現在のフィールドに情報が入力されます。
@@ -80,23 +80,25 @@ Contoso 社の経営陣は、Azure IoT サービスを使用して作成した�
 
     * connectionString
 
-これで、リソースが作成されました。
+    これで、リソースが作成されました。
 
->**注**:このラボを成功させるには、**microsoft.eventgrid** リソース プロバイダーの登録が必要になる場合があります。 次のコマンドを実行して確認します。
+    > **注**:このラボを成功させるには、**microsoft.eventgrid** リソース プロバイダーの登録が必要になる場合があります。 次のコマンドを実行して確認します。
 
-```bash
-az provider show --namespace microsoft.eventgrid -o tsv
-```
-> 結果に **[登録済み]** と表示された場合、これ以上何も必要ありません。 **NotRegistered** の場合は、次のコマンドを実行して **microsoft.eventgrid** プロバイダーを登録します。
+    ```bash
+    az provider show --namespace microsoft.eventgrid -o tsv
+    ```
 
-```bash
-az provider register --namespace microsoft.eventgrid
-```
-> これが完了するまで 15 分以上かかる場合があります。 次のメッセージが表示されます。
+    結果に **[登録済み]** と表示された場合、これ以上何も必要ありません。 **NotRegistered** の場合は、次のコマンドを実行して **microsoft.eventgrid** プロバイダーを登録します。
 
-```bash
-Registering is still on-going. You can monitor using 'az provider show -n microsoft.eventgrid'
-```
+    ```bash
+    az provider register --namespace microsoft.eventgrid
+    ```
+
+    これが完了するまで 15 分以上かかる場合があります。 次のメッセージが表示されます。
+
+    ```bash
+    Registering is still on-going. You can monitor using 'az provider show -n microsoft.eventgrid'
+    ```
 
 ### <a name="exercise-2-create-http-web-hook-logic-app-that-sends-an-email"></a>演習 2:メールを送信する HTTP Web Hook ロジック アプリを作成する
 
@@ -132,9 +134,7 @@ Azure Logic Apps は、企業全体または組織全体でアプリ、データ
 
 1. **[リージョン]** ドロップダウンで、リソース グループに使用したのと同じ Azure リージョンを選択します。
 
-1. **[Log Analytics を有効にする]** は **[いいえ]** のままにします。
-
-1. **[Review + create]\(レビュー + 作成\)** をクリックします。
+1. **[Review + create](レビュー + 作成)** をクリックします。
 
 1. **[確認と作成]** タブで、**[作成]** をクリックします。
 
